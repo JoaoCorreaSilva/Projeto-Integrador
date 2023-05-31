@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .background {
+    background-image: url(loja\ boys.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+  }
+
+  body {
+    background-color: #CAFFFD;
+    background-image: url(background\ color2.jpg);
+  }
+
+  body img{
+    background-color: transparent;
+  }
+  
+  .navbar {
+    background-color: #f8f8f8;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin-left: 50px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+  }
+  
+  .navbar a:hover {
+    color: #666;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    background: transparent;
+    transition: all .35s ease;
+    background-color: #fff;
+    padding: 14px 14%;
+    height: auto;
+    background-color: #dce9f2;
+  }
+  
+  .logo {
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+  
+  .icon span {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .icon span:hover {
+    color: #c8815f;
+  }
+  
+  .Meio {
+    padding: 7rem 0 0 8.5rem;
+    line-height: 4rem;
+  }
+  
+  .Meio h1 {
+    font-size: 4rem;
+  }
+  
+  .Meio button {
+    background-color: #c8815f;
+    padding: 1rem 3rem 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .Meio button:hover {
+    background-color: #111;
+    transform: scaleY(1.2);
+  }
+  
+  section {
+    padding-top: 7rem;
+  }
+  
+  section h1 {
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .Container-card-1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+
+  .cards {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .cards img {
+    width: 450px;
+    height: auto;
+    transition: 0.35s ease;
+  }
+  
+  .cards img:hover {
+    transform: scale(0.9) translateY(-5px);
+    cursor: pointer;
+  }
+
+  .card-description {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .card-description p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .card-description p:first-child {
+    font-weight: bold;
+  }
+  
+  .card-description p:last-child {
+    color: #c8815f;
+    font-weight: bold;
+  }
+
+  .modal-body {
+    max-height: 500px;
+    overflow-y: auto;
+}
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+  
+  .cta {
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+  }
+  
+  .text-cta {
+    padding-left: 5rem;
+  }
+  
+  .text-cta h6 {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: .6px;
+    margin-bottom: 14px;
+  }
+  
+  .text-cta h4 {
+    font-size: 3.3rem;
+    line-height: 1.2;
+    letter-spacing: .6rem;
+    margin-bottom: 30px;
+  }
+  
+  .text-cta a {
+    background-color: #c8815f;
+    padding: 1rem 3rem 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .text-cta a:hover {
+    background-color: #111;
+    transform: scaleY(1.2);
+  }
+  
+  /* Estilo para o carousel */
+  .carousel {
+    margin-bottom: 30px;
+  }
+  
+  .carousel-inner {
+    position: relative;
+  }
+  
+  .carousel-item {
+    text-align: center;
+  }
+  
+  .carousel-item img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 200px;
+  }
+  
+  .carousel-item p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .carousel-item h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para os indicadores */
+  .carousel-indicators {
+    bottom: -40px;
+  }
+  
+  .carousel-indicators li {
+    background-color: #ccc;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #555;
+  }
+  
+  /* Estilo para os controles */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: auto;
+    color: #000000;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.15s ease-in-out;
+  }
+  
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    color: #000000;
+    opacity: 0.9;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: no-repeat 50% / 100% 100%;
+  }
+  
+  .carousel-control-prev-icon {
+    background-image: url('prev.png.png'); /* Substitua com o caminho para o ícone de controle anterior */
+  }
+  
+  .carousel-control-next-icon {
+    background-image: url('next.png.png'); /* Substitua com o caminho para o ícone de controle seguinte */
+  }
+  
+  .Container-roupas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .Container-roupas img:hover {
+    transform: scale(0.9) translateY(-5px);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .roupa img {
+    width: 300px;
+    height: 800px;
+  }
+  
+  .roupa {
+    background-color: #c8815f;
+    color: #000;
+  }
+
+
+   /* Estilo para o botão de comprar */
+   .buy-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  
+  #Contato {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-around;
+    background-color: #111;
+    padding: 8rem;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  }
+  
+  .meio-contato h3 {
+    color: #fff;
+    font-size: 23px;
+    margin-bottom: 1.6rem;
+  }
+  
+  .meio-contato h5 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .meio-contato li {
+    margin-bottom: 15px;
+  }
+  
+  .meio-contato li a {
+    display: block;
+    color: #555;
+    font-weight: 600;
+    transition: all 0.35s ease;
+  }
+  
+  .last-text {
+    text-align: center;
+    background-color: #555;
+    color: #fff;
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      width: 600px;
+      height: auto;
+    }
+  
+    header {
+      float: left;
+    }
+  
+    header h1 {
+      font-size: 1.5em;
+      float: right;
+    }
+  }
+  
