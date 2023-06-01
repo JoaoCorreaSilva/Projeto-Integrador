@@ -10,6 +10,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="imagem/x-icon" href="img/debit-card.png">
     <title>Baby World</title>
 </head>
 <body>
@@ -37,7 +38,7 @@
         <h1>NOVAS CATEGORIAS</h1>
         <div class="Container-card-1">
           <div class="cards" data-product-id="1">
-            <img src="Body family.png" alt="Body family">
+            <img src="img/Body family.png" alt="Body family">
             <div class="card-description">
               <p>Para seu Baby family frendly</p>
               <i class='bx bxs-face' ></i>
@@ -47,7 +48,7 @@
           </div><!--cards-->
       
           <div class="cards">
-            <img src="Body pecuara.png" alt="Body pecuária">
+            <img src="img/Body pecuara.png" alt="Body pecuária">
             <div class="card-description">
               <p>Para seu Baby da pecuária</p>
               <i class='bx bxs-beer'></i>
@@ -59,7 +60,7 @@
       
         <div class="Container-card-1">
           <div class="cards">
-            <img src="Body FBI-PhotoRoom.png.png" alt="Body FBI-PhotoRoom">
+            <img src="img/Body FBI-PhotoRoom.png.png" alt="Body FBI-PhotoRoom">
             <div class="card-description">
               <p>Para seu Baby operacional</p>
               <i class='bx bxs-skull'></i>
@@ -69,7 +70,7 @@
           </div><!--cards-->
       
           <div class="cards">
-            <img src="Body Modõa.png" alt="Body modão-PhotoRoom">
+            <img src="img/Body Modõa.png" alt="Body modão-PhotoRoom">
             <div class="card-description">
               <p>Para seu Baby dos MODÃO</p>
               <i class='bx bxs-beer'></i>
@@ -81,7 +82,7 @@
       
         <div class="Container-card-1">
           <div class="cards">
-            <img src="Body_Rafael.png.png" alt="Body_instrução">
+            <img src="img/Body_Rafael.png.png" alt="Body_instrução">
             <div class="card-description">
               <p>Para o Baby do RT</p>
               <i class='bx bxl-java' ></i>
@@ -91,7 +92,7 @@
           </div><!--cards-->
       
           <div class="cards">
-            <img src="Body_Youtube.png.png" alt="Body_Youtube">
+            <img src="img/Body_Youtube.png.png" alt="Body_Youtube">
             <div class="card-description">
               <p>Para seu Baby Youtuber</p>
               <i class='bx bxl-youtube' ></i>
@@ -102,37 +103,83 @@
         </div><!--Container-card-1-->
       </section>
 
-      <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Produto</th>
-                    <th>Preço</th>
-                  </tr>
-                </thead>
-                <tbody id="cartItems">
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td>Total:</td>
-                    <td id="cartTotal">R$ 0,00</td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-  
+      
+	<main>
+		<script type="text/javascript" src="Site.js"></script>
+
+		<div class="container center">
+			<form>
+				<div class="row">
+					<fieldset style="border: 1px solid lightgrey; padding: 1em">
+						<div class="col s10 l12">
+
+							<!-- PRODUTOS -->
+							<table class="responsive-table center">
+								<tbody id="carrinho">
+									<tr class="center" id="Body1">
+										<td><img width="100px" src="img/Body family.png"></td>
+										<td>Body Family<br>R$500,00</td>
+										<!-- ADICIONAR AO CARRINHO -->
+										<td><i onclick="adicionarItem(1)" class="material-icons green-text" style="cursor: pointer;">add_circle</i></td>
+										<td>
+											<p id="quantidade1">0</p>
+										</td>
+										<!-- REMOVER DO CARRINHO -->
+										<td><i onclick="removerItem(1)" class="material-icons red-text" style="cursor: pointer;">remove_circle</i></td>
+										<td>
+											Total<br>R$<span id="total1">00,00</span>
+										</td>
+										<!-- REMOVER PRODUTO DA LISTA -->
+										<td><i onclick="removerProduto(1)" class="material-icons blue-text text-darken-1" style="cursor: pointer">delete</i></td>
+									</tr>
+									<tr id="produto2" id="Body2">
+										<td><img width="100px" src="img/Body pecuara.png"></td>
+										<td>Baby da pecuária<br>R$5,00</td>
+										<!-- ADICIONAR AO CARRINHO -->
+										<td><i onclick="adicionarItem(2)" class="material-icons green-text" style="cursor: pointer;">add_circle</i></td>
+										<td>
+											<p id="quantidade2">0</p>
+										</td>
+										<!-- REMOVER DO CARRINHO -->
+										<td><i onclick="removerItem(2)" class="material-icons red-text" style="cursor: pointer;">remove_circle</i></td>
+										<td>
+											Total<br>R$<span id="total2">00,00</span>
+										</td>
+										<!-- REMOVER PRODUTO DA LISTA -->
+										<td><i onclick="removerProduto(2)" class="material-icons blue-text text-darken-1" style="cursor: pointer">delete</i></td>
+									</tr>
+									<tr id="produto3" id="Body FBI">
+										<td><img width="100px" src="img/Body FBI-PhotoRoom.png.png"></td>
+										<td>Body FBI<br>R$3000,00</td>
+										<!-- ADICIONAR AO CARRINHO -->
+										<td><i onclick="adicionarItem(3)" class="material-icons green-text" style="cursor: pointer;">add_circle</i></td>
+										<td>
+											<p id="quantidade3">0</p>
+										</td>
+										<!-- REMOVER DO CARRINHO -->
+										<td><i onclick="removerItem(3)" class="material-icons red-text" style="cursor: pointer;">remove_circle</i></td>
+										<!-- REMOVER PRODUTO DA LISTA -->
+										<td>Total<br>R$<span id="total3">00,00</span></td>
+										<td><i onclick="removerProduto(3)" class="material-icons blue-text text-darken-1" style="cursor: pointer">delete</i></td>
+									</tr>
+								</tbody>
+							</table>
+							<br>
+						</div>
+						<!-- VALOR TOTAL DOS ITENS ADICIONADOS AO CARRINHO -->
+						<div class="s12 l6 offset-l6">
+							<h2 class="blue-text text-darken-1 flow-text">Valor Total da Compra: R$<span id="valorTotalCompra">00,00</span></h2>
+						</div>
+					</fieldset>
+					<br>
+					<!-- FINALIZA A COMPRA E RESETA O CARRINHO -->
+					<div class="col s12 l4 offset-l4">
+						<button class="btn waves-light waves-effect red white-text" onclick="finalizarCompra()">FINALIZAR COMPRA</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</main>
 
     <section class="cta">
         <div class="text-cta">
@@ -154,7 +201,7 @@
                 <div class="carousel-item active">
                     <div class="Container-roupas">
                         <div class="roupa">
-                            <img src="Roupinha 1.png" alt="Roupa 1">
+                            <img src="img/Roupinha 1.png" alt="Roupa 1">
                             <p>Baby Bad</p>
                             <h5>$89.90</h5>
                             <ion-icon name="cart-outline"></ion-icon>
@@ -164,7 +211,7 @@
                 <div class="carousel-item">
                     <div class="Container-roupas">
                         <div class="roupa">
-                            <img src="Roupinha 2.png" alt="Roupa 2">
+                            <img src="img/Roupinha 2.png" alt="Roupa 2">
                             <p>Baby Bad</p>
                             <h5>$89.90</h5>
                             <ion-icon name="cart-outline"></ion-icon>
@@ -174,7 +221,7 @@
                 <div class="carousel-item">
                     <div class="Container-roupas">
                         <div class="roupa">
-                            <img src="Roupinha 3.png" alt="Roupa 3">
+                            <img src="img/Roupinha 3.png" alt="Roupa 3">
                             <p>Baby Good</p>
                             <h5>$99.90</h5>
                             <ion-icon name="cart-outline"></ion-icon>
@@ -184,7 +231,7 @@
                 <div class="carousel-item">
                     <div class="Container-roupas">
                         <div class="roupa">
-                            <img src="Roupinha 4.png" alt="Roupa 4">
+                            <img src="img/Roupinha 4.png" alt="Roupa 4">
                             <p>Baby Cute</p>
                             <h5>$79.90</h5>
                             <ion-icon name="cart-outline"></ion-icon>
@@ -194,7 +241,7 @@
                 <div class="carousel-item">
                     <div class="Container-roupas">
                         <div class="roupa">
-                            <img src="Roupinha 5.png" alt="Roupa 5">
+                            <img src="img/Roupinha 5.png" alt="Roupa 5">
                             <p>Baby Cool</p>
                             <h5>$69.90</h5>
                             <ion-icon name="cart-outline"></ion-icon>
@@ -204,7 +251,7 @@
             <div class="carousel-item">
                 <div class="Container-roupas">
                     <div class="roupa">
-                        <img src="Roupinha 6.png.png" alt="Roupa 6">
+                        <img src="img/Roupinha 6.png.png" alt="Roupa 6">
                         <p>Baby Cool</p>
                         <h5>$69.90</h5>
                         <ion-icon name="cart-outline"></ion-icon>
@@ -214,7 +261,7 @@
             <div class="carousel-item">
                 <div class="Container-roupas">
                     <div class="roupa">
-                        <img src="Roupinha 7.png.png" alt="Roupa 7">
+                        <img src="img/Roupinha 7.png.png" alt="Roupa 7">
                         <p>Baby Cool</p>
                         <h5>$69.90</h5>
                         <ion-icon name="cart-outline"></ion-icon>
@@ -281,6 +328,6 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="Site.js"></script>
-
+      
 </body>
 </html>
