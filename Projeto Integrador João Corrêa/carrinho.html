@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Baby World - Carrinho de Compras</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                    <li><a href="#">Contatos</a></li>
+                    <li><a href="carrinho.html">Carrinho</a></li>
+                </ul>
+            </nav>
+            <div id="logo">
+                <h1>Baby World</h1>
+                <div class="logo">
+                    <img src="img/loja boys.jpg" alt="loja" style="max-width: 200px; height: auto;">
+                </div>
+            </div>
+            <div id="carrinho">
+                <a href="carrinho.html">
+                    <img src="img/cart-regular-24.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Carrinho de Compras</h1>
+        <div id="cart-items">
+            <p id="empty-cart-message">Seu carrinho está vazio.</p>
+        </div>
+        <button id="clear-cart-button">Limpar Carrinho</button>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div id="contact">
+                <h3>No Santos, todo sócio é Rei</h3>
+                <br>
+                Loja não oficial do Santos Futebol Clube.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Site.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            var cartItemsContainer = document.getElementById("cart-items");
+            var emptyCartMessage = document.getElementById("empty-cart-message");
+            
+            var cart = localStorage.getItem("cart");
+            if (cart) {
+                cart = JSON.parse(cart);
+                if (cart.length > 0) {
+                    emptyCartMessage.style.display = "none";
+                    for (var i = 0; i < cart.length; i++) {
+                        var item = cart[i];
+                        var itemElement = document.createElement("p");
+                        itemElement.textContent = item.name + " - R$" + item.price;
+                        cartItemsContainer.appendChild(itemElement);
+                    }
+                }
+            }
+        });
+
+        var clearCartButton = document.getElementById("clear-cart-button");
+        clearCartButton.addEventListener("click", function() {
+            localStorage.removeItem("cart");
+            cartItemsContainer.innerHTML = "";
+            emptyCartMessage.style.display = "block";
+        });
+    </script>
+</body>
+</html>

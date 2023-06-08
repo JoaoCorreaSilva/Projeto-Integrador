@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style.css">
     <script src="Site.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -21,13 +21,17 @@
             </div><!--logo-->
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">Início</a></li>
+                    <li><a href="index.html">Início</a></li>
                     <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
                     <li><a href="#">Contatos</a></li>
+                    <li><a href="carrinho.html">carrinho</a></li>
                 </ul>
             </nav>
-            <div class="icon" id="cart-icon"><span><ion-icon name="bag-outline"></ion-icon></span></div><!--icon-->
+            <div id="carrinho">
+                <a href="carrinho.html">
+                <img id="cart-image" src="img/cart-regular-24.png" alt="">
+            </div><!--icon-->
         </header>
 
         <div class="Meio">
@@ -103,84 +107,6 @@
         </div><!--Container-card-1-->
       </section>
 
-      
-	<main>
-		<script type="text/javascript" src="Site.js"></script>
-
-		<div class="container center">
-			<form>
-				<div class="row">
-					<fieldset style="border: 1px solid lightgrey; padding: 1em">
-						<div class="col s10 l12">
-
-							<!-- PRODUTOS -->
-							<table class="responsive-table center">
-								<tbody id="carrinho">
-									<tr class="center" id="Body1">
-										<td><img width="100px" src="img/Body family.png"></td>
-										<td>Body Family<br>R$500,00</td>
-										<!-- ADICIONAR AO CARRINHO -->
-										<td><i onclick="adicionarItem(1)" class="material-icons green-text" style="cursor: pointer;">add_circle</i></td>
-										<td>
-											<p id="quantidade1">0</p>
-										</td>
-										<!-- REMOVER DO CARRINHO -->
-										<td><i onclick="removerItem(1)" class="material-icons red-text" style="cursor: pointer;">remove_circle</i></td>
-										<td>
-											Total<br>R$<span id="total1">00,00</span>
-										</td>
-										<!-- REMOVER PRODUTO DA LISTA -->
-										<td><i onclick="removerProduto(1)" class="material-icons blue-text text-darken-1" style="cursor: pointer">delete</i></td>
-									</tr>
-									<tr id="produto2" id="Body2">
-										<td><img width="100px" src="img/Body pecuara.png"></td>
-										<td>Baby da pecuária<br>R$5,00</td>
-										<!-- ADICIONAR AO CARRINHO -->
-										<td><i onclick="adicionarItem(2)" class="material-icons green-text" style="cursor: pointer;">add_circle</i></td>
-										<td>
-											<p id="quantidade2">0</p>
-										</td>
-										<!-- REMOVER DO CARRINHO -->
-										<td><i onclick="removerItem(2)" class="material-icons red-text" style="cursor: pointer;">remove_circle</i></td>
-										<td>
-											Total<br>R$<span id="total2">00,00</span>
-										</td>
-										<!-- REMOVER PRODUTO DA LISTA -->
-										<td><i onclick="removerProduto(2)" class="material-icons blue-text text-darken-1" style="cursor: pointer">delete</i></td>
-									</tr>
-									<tr id="produto3" id="Body FBI">
-										<td><img width="100px" src="img/Body FBI-PhotoRoom.png.png"></td>
-										<td>Body FBI<br>R$3000,00</td>
-										<!-- ADICIONAR AO CARRINHO -->
-										<td><i onclick="adicionarItem(3)" class="material-icons green-text" style="cursor: pointer;">add_circle</i></td>
-										<td>
-											<p id="quantidade3">0</p>
-										</td>
-										<!-- REMOVER DO CARRINHO -->
-										<td><i onclick="removerItem(3)" class="material-icons red-text" style="cursor: pointer;">remove_circle</i></td>
-										<!-- REMOVER PRODUTO DA LISTA -->
-										<td>Total<br>R$<span id="total3">00,00</span></td>
-										<td><i onclick="removerProduto(3)" class="material-icons blue-text text-darken-1" style="cursor: pointer">delete</i></td>
-									</tr>
-								</tbody>
-							</table>
-							<br>
-						</div>
-						<!-- VALOR TOTAL DOS ITENS ADICIONADOS AO CARRINHO -->
-						<div class="s12 l6 offset-l6">
-							<h2 class="blue-text text-darken-1 flow-text">Valor Total da Compra: R$<span id="valorTotalCompra">00,00</span></h2>
-						</div>
-					</fieldset>
-					<br>
-					<!-- FINALIZA A COMPRA E RESETA O CARRINHO -->
-					<div class="col s12 l4 offset-l4">
-						<button class="btn waves-light waves-effect red white-text" onclick="finalizarCompra()">FINALIZAR COMPRA</button>
-					</div>
-				</div>
-			</form>
-		</div>
-	</main>
-
     <section class="cta">
         <div class="text-cta">
             <h6></h6>
@@ -196,6 +122,8 @@
                 <li data-target="#carouselExample" data-slide-to="1"></li>
                 <li data-target="#carouselExample" data-slide-to="2"></li>
                 <li data-target="#carouselExample" data-slide-to="3"></li>
+                <li data-target="#carouselExample" data-slide-to="4"></li>
+                <li data-target="#carouselExample" data-slide-to="5"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -248,25 +176,6 @@
                         </div><!--roupa-->
                     </div><!--Container-roupas-->
                 </div>
-            <div class="carousel-item">
-                <div class="Container-roupas">
-                    <div class="roupa">
-                        <img src="img/Roupinha 6.png.png" alt="Roupa 6">
-                        <p>Baby Cool</p>
-                        <h5>$69.90</h5>
-                        <ion-icon name="cart-outline"></ion-icon>
-                    </div><!--roupa-->
-                </div><!--Container-roupas-->
-            </div>
-            <div class="carousel-item">
-                <div class="Container-roupas">
-                    <div class="roupa">
-                        <img src="img/Roupinha 7.png.png" alt="Roupa 7">
-                        <p>Baby Cool</p>
-                        <h5>$69.90</h5>
-                        <ion-icon name="cart-outline"></ion-icon>
-                    </div><!--roupa-->
-                </div><!--Container-roupas-->
             </div>
             <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -329,5 +238,20 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="Site.js"></script>
       
+    <script>
+        document.getElementById("cart-image").addEventListener("click", function() {
+            window.location.href = "carrinho.html";
+        });
+    
+        var buyButtons = document.getElementsByClassName("buy-button");
+        for (var i = 0; i < buyButtons.length; i++) {
+            buyButtons[i].addEventListener("click", function(event) {
+                var itemName = event.target.getAttribute("data-name");
+                var itemPrice = event.target.getAttribute("data-price");
+                
+                // adicionarItemAoCarrinho(itemName, itemPrice);
+            });
+        }
+    </script>
 </body>
 </html>

@@ -17,15 +17,25 @@
     height: 100vh;
   }
 
+  #logo img {
+      width: 86rem;
+      justify-content: left;
+  }
+
   body {
     background-color: #CAFFFD;
-    background-image: url(background\ color2.jpg);
+    background-image: url(img/background\ color2.jpg);
   }
 
   body img{
     background-color: transparent;
   }
-  
+
+  #carrinho img {
+    height: 35px;
+    cursor: pointer;
+  }
+
   .navbar {
     background-color: #f8f8f8;
     padding: 10px;
